@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "background": "#f9f9f9",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-surface": "#2f3131",
+                        "secondary-fixed": "#ffdad4",
+                        "inverse-primary": "#e9c400",
+                        "tertiary-container": "#2d2d2d",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#362c00",
+                        "surface": "#f9f9f9",
+                        "tertiary": "#181819",
+                        "outline-variant": "#d3c3c0",
+                        "secondary-fixed-dim": "#e3beb8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#ae9200",
+                        "on-secondary-container": "#795c57",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "primary-fixed-dim": "#e9c400",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#221b00",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-background": "#1a1c1c",
+                        "primary": "#1e1800",
+                        "on-secondary-fixed": "#2b1613",
+                        "surface-dim": "#dadada",
+                        "on-surface-variant": "#504442",
+                        "on-tertiary-container": "#969494",
+                        "tertiary-fixed": "#e5e2e1",
+                        "secondary": "#745853",
+                        "outline": "#827472",
+                        "surface-variant": "#e2e2e2",
+                        "surface-tint": "#705d00",
+                        "surface-container": "#eeeeee",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#5b403c",
+                        "primary-fixed": "#ffe16d",
+                        "secondary-container": "#fed7d0",
+                        "on-primary-fixed-variant": "#544600",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-surface": "#1a1c1c"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-[#1e1800] z-50">
+<div class="text-2xl font-black text-[#FFD700] tracking-tighter">ASPEN TIMBER</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#FFD700] font-bold border-b-2 border-[#FFD700] pb-1 font-['Inter'] uppercase tracking-tighter" href="#catalog">Catalog</a>
+<a class="text-white/70 hover:text-white transition-colors font-['Inter'] uppercase tracking-tighter" href="#applications">Applications</a>
+<a class="text-white/70 hover:text-white transition-colors font-['Inter'] uppercase tracking-tighter" href="#advantages">Advantages</a>
+<a class="text-white/70 hover:text-white transition-colors font-['Inter'] uppercase tracking-tighter" href="#portfolio">Portfolio</a>
+</nav>
+<div class="text-[#FFD700] font-black font-['Inter'] tracking-tighter">+7 (999) 000-00-00</div>
+</header>
+<!-- SideNavBar (Floating Circular Buttons) -->
+<aside class="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+<a class="w-14 h-14 rounded-full bg-[#4CAF50] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform" href="#" title="Phone">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</a>
+<a class="w-14 h-14 rounded-full bg-[#0088cc] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform" href="#" title="Telegram">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</a>
+<a class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform bg-transparent" href="#" title="MAX Messenger">
+<img alt="MAX messenger logo" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBDwc5k2hcxaOvxkzWmrQtbYlCb8GpjAheXXp05PhjAgCQKknl_omyBHCuBSf84Ds4ZMGz_lbCOyzZg0DRQxcvaJ4nSoMUtyzpI2way_S8i1HDYrLYnAFJaEon2yjmtcGi7KwCU05e4oYvnpiDepbsBWCSb-GEjixsxOezf_lQKpnAE4CV24yvGrz8IGGQiayhzaF3WRNGRh3rlxPNIt75Xp8av-AYW9js5QIVfwZJBqRCHYCiKkaM19ti5vZnFk1w6iBLckb4yYnG"/>
+</a>
+</aside>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[819px] min-h-[600px] flex items-center overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="Aspen lumber stack" class="w-full h-full object-cover" data-alt="high-quality neatly stacked pale aspen timber boards in a bright industrial warehouse setting with sharp linear perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqrhfX2pCvSrx2jOqB545bcK43l_cHFxrro7aC9TI9eJoS_17YcZ4qGAdtu_Wk3gOeLfvPztX-8IgT1dh7tUkpJ0fsEp17o3-BjMB4b-h-aG9M7Ag42YBEbhstBoSM8bJDJRnBOd3pkl781UutrugdMc2QkBPPu-ZKdFUWqaaIyWmpUmhegwaTWK9q7S_h4DdgVMzRLQcyio9Yzsb2jn3bDl1ojhyoxEZBP9D7j4Xs7Nhz00QJBxrnw9Bi2NEYubs-JZTk0a_r1T4q"/>
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-4xl">
+<h1 class="text-white text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6">
+                    ОБРЕЗНАЯ ДОСКА <br/>ИЗ ОСИНЫ
+                </h1>
+<p class="text-white/80 text-xl md:text-2xl font-body max-w-2xl mb-8">
+                    Экологичный материал для бань и саун напрямую от производителя. Высочайшее качество обработки.
+                </p>
+<!-- Benefits List -->
+<div class="flex flex-col gap-4 mb-12">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-[#FFD700]" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-bold uppercase tracking-wider text-sm">Бесплатная распилка и погрузка</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-[#FFD700]" data-icon="verified">verified</span>
+<span class="font-bold uppercase tracking-wider text-sm">Более 20 лет на рынке</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-[#FFD700]" data-icon="local_shipping">local_shipping</span>
+<span class="font-bold uppercase tracking-wider text-sm">Доставка сегодня</span>
+</div>
+</div>
+<a class="inline-block bg-[#FFD700] text-[#1e1800] px-12 py-5 font-black uppercase tracking-widest hover:bg-[#e9c400] transition-colors" href="#catalog">
+                    УЗНАТЬ РАЗМЕРЫ
+                </a>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 p-8">
+<div class="text-white/20 font-black text-9xl tracking-tighter leading-none pointer-events-none uppercase">ASPHALL</div>
+</div>
+</section>
+<!-- Mini Catalog Section -->
+<section class="py-24 bg-surface-container-low border-b border-outline/10">
+<div class="container mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-4xl font-black uppercase tracking-tighter leading-none text-primary">МИНИ КАТАЛОГ РАЗМЕРОВ СТРОГАННОЙ ДОСКИ</h2>
+<div class="w-24 h-2 bg-[#FFD700] mt-4"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Row 1: 25mm -->
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-16 h-[25px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">25×100 мм</span>
+</div>
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-24 h-[25px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">25×150 мм</span>
+</div>
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-32 h-[25px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">25×200 мм</span>
+</div>
+<!-- Row 2: 30mm -->
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-16 h-[30px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">30×100 мм</span>
+</div>
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-24 h-[30px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">30×150 мм</span>
+</div>
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-32 h-[30px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">30×200 мм</span>
+</div>
+<!-- Row 3: 40mm -->
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-16 h-[40px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">40×100 мм</span>
+</div>
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-24 h-[40px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">40×150 мм</span>
+</div>
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-32 h-[40px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">40×200 мм</span>
+</div>
+<!-- Row 4: 50mm -->
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-16 h-[50px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">50×100 мм</span>
+</div>
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-24 h-[50px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">50×150 мм</span>
+</div>
+<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
+<div class="w-32 h-[50px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
+<span class="font-black text-xl text-primary">50×200 мм</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Catalog -->
+<section class="py-24 bg-surface" id="catalog">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="text-5xl font-black uppercase tracking-tighter leading-none text-primary">КАТАЛОГ ПРОДУКЦИИ</h2>
+<div class="w-24 h-2 bg-[#FFD700] mt-4"></div>
+</div>
+<p class="max-w-md text-on-surface-variant font-body uppercase text-sm tracking-widest">
+                    ПРАЙС-ЛИСТ ОТ 2024 ГОДА. ВСЕ ПОЗИЦИИ В НАЛИЧИИ НА СКЛАДЕ.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-outline/10">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-4xl font-black text-primary mt-2">50х100</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">33 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-4 mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-4xl font-black text-primary mt-2">100х100</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">16 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-4 mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-4xl font-black text-primary mt-2">25х100</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">66 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-4 mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-4xl font-black text-primary mt-2">25х150</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">44 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-4 mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-4xl font-black text-primary mt-2">50х200</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">16 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-4 mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-4xl font-black text-primary mt-2">50x150</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">22 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-4 mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Application Section -->
+<section class="py-24 bg-surface-container-low" id="applications">
+<div class="container mx-auto px-8">
+<h2 class="text-5xl font-black uppercase tracking-tighter leading-none text-primary mb-16">ГДЕ ИСПОЛЬЗУЕТСЯ?</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-surface p-8 border-l-4 border-primary">
+<div class="text-[#FFD700] mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="hot_tub">hot_tub</span>
+</div>
+<h3 class="text-xl font-black uppercase mb-4 leading-tight">Отделка бань и саун</h3>
+<p class="text-on-surface-variant">Осина не выделяет смолу и не обжигает кожу при высоких температурах.</p>
+</div>
+<div class="bg-surface p-8 border-l-4 border-primary">
+<div class="text-[#FFD700] mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="foundation">foundation</span>
+</div>
+<h3 class="text-xl font-black uppercase mb-4 leading-tight">Каркасные перегородки</h3>
+<p class="text-on-surface-variant">Высокая прочность и устойчивость к деформациям при высыхании.</p>
+</div>
+<div class="bg-surface p-8 border-l-4 border-primary">
+<div class="text-[#FFD700] mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="chair">chair</span>
+</div>
+<h3 class="text-xl font-black uppercase mb-4 leading-tight">Мебель для влажных помещений</h3>
+<p class="text-on-surface-variant">Идеально подходит для скамеек, полков и интерьерных решений.</p>
+</div>
+<div class="bg-surface p-8 border-l-4 border-primary">
+<div class="text-[#FFD700] mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="home">home</span>
+</div>
+<h3 class="text-xl font-black uppercase mb-4 leading-tight">Внутренняя отделка построек</h3>
+<p class="text-on-surface-variant">Создает светлый, эстетичный вид и приятный микроклимат в помещении.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Advantages Section -->
+<section class="py-24 bg-primary text-white overflow-hidden relative" id="advantages">
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-12">ПРЕИМУЩЕСТВА ОСИНЫ</h2>
+<ul class="space-y-8">
+<li class="flex items-start gap-6">
+<span class="bg-[#FFD700] text-[#1e1800] p-2 font-black">01</span>
+<div>
+<h4 class="text-2xl font-black uppercase tracking-tight">Низкая теплопроводность</h4>
+<p class="text-white/60 mt-2">Материал долго нагревается, обеспечивая комфорт в парной.</p>
+</div>
+</li>
+<li class="flex items-start gap-6">
+<span class="bg-[#FFD700] text-[#1e1800] p-2 font-black">02</span>
+<div>
+<h4 class="text-2xl font-black uppercase tracking-tight">Экологичность</h4>
+<p class="text-white/60 mt-2">100% натуральная древесина из экологически чистых районов.</p>
+</div>
+</li>
+<li class="flex items-start gap-6">
+<span class="bg-[#FFD700] text-[#1e1800] p-2 font-black">03</span>
+<div>
+<h4 class="text-2xl font-black uppercase tracking-tight">Лёгкость в обработке</h4>
+<p class="text-white/60 mt-2">Податливый материал для точной резки и шлифовки.</p>
+</div>
+</li>
+<li class="flex items-start gap-6">
+<span class="bg-[#FFD700] text-[#1e1800] p-2 font-black">04</span>
+<div>
+<h4 class="text-2xl font-black uppercase tracking-tight">Эстетичный светлый оттенок</h4>
+<p class="text-white/60 mt-2">Сохраняет благородный бежевый цвет долгие годы.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative">
+<img alt="Timber quality control" class="w-full grayscale contrast-125" data-alt="dramatic high contrast industrial close up of raw timber texture with sharp wood grain and natural patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpSxnkuaPFRii7paBrR7suG14C-S193rxoOunJXRIGh92MGn_phEzvMK6YpjFdxmV6bOoytW4kK5ZYgIj7ORqQARYjf2CxnTM82yyoOl0UKZHaBpc0teBGnNXAgr39FgajT2zldwZMwWafr2tU904AQdz4O0iJL7t6EIUcGQO_B8zcfuHVo7TmNPm3mBgz_DNhdKwNGiMTz_xy9L6hnu2LBqVLjG3bqKco8M8mbiR0N9ED7Ezh-42Z5c8FHsCO1iTdcDk91Ys9Ohgc"/>
+<div class="absolute -bottom-8 -left-8 bg-[#FFD700] p-12 hidden md:block">
+<div class="text-[#1e1800] font-black text-4xl">QUALITY <br/>GRADE A</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-24 bg-surface" id="portfolio">
+<div class="container mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-5xl font-black uppercase tracking-tighter leading-none text-primary">ПРИМЕРЫ НАШИХ РАБОТ</h2>
+<div class="w-24 h-2 bg-[#FFD700] mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+<!-- Project 1 -->
+<div class="group relative aspect-square overflow-hidden bg-primary/10">
+<img alt="Sauna interior with aspen wood" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="warm inviting luxury sauna interior with golden aspen wood slats on walls and ceiling smooth wooden benches and soft atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHXidZ9-tL-P4pE_f8Ff_lU5Vv3O7hEw6pB4v7g8w9z0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m6n7o8p9q0r1s2t3u4v5w6x7y8z9a0b1c2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w2x3y4z5"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-[#FFD700] font-black uppercase text-xs tracking-widest mb-2">Отделка бани</span>
+<h4 class="text-white text-xl font-black uppercase">Интерьер из осины Grade A</h4>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative aspect-square overflow-hidden bg-primary/10">
+<img alt="Woodworking detail" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="close-up of expert woodworking craftsman hands shaping a piece of pale timber with traditional tools in a sunlit workshop wood shavings visible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9f-yX9_zM8-w_t_L_b_n_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-[#FFD700] font-black uppercase text-xs tracking-widest mb-2">Мастерская</span>
+<h4 class="text-white text-xl font-black uppercase">Профессиональная обработка</h4>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative aspect-square overflow-hidden bg-primary/10">
+<img alt="Custom wooden furniture" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="minimalist modern designer bench made of solid pale aspen wood with visible natural grain sitting in a minimalist bright gallery space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-[#FFD700] font-black uppercase text-xs tracking-widest mb-2">Мебель</span>
+<h4 class="text-white text-xl font-black uppercase">Дизайнерские решения</h4>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group relative aspect-square overflow-hidden bg-primary/10">
+<img alt="Timber frame structure" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="geometric timber structure under construction showing the precision of joinery and the clean light color of fresh aspen wood against a blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk-l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-[#FFD700] font-black uppercase text-xs tracking-widest mb-2">Конструкции</span>
+<h4 class="text-white text-xl font-black uppercase">Каркасные постройки</h4>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="group relative aspect-square overflow-hidden bg-primary/10">
+<img alt="Modern interior with wood accents" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="contemporary living room interior featuring vertical aspen wood slat accent wall light airy atmosphere with natural textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-[#FFD700] font-black uppercase text-xs tracking-widest mb-2">Интерьер</span>
+<h4 class="text-white text-xl font-black uppercase">Декоративные панели</h4>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="group relative aspect-square overflow-hidden bg-primary/10">
+<img alt="Stacks of finished timber" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="neatly organized warehouse rows of premium quality aspen timber ready for delivery showcasing the uniform light color and flawless surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH-i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_0_a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-[#FFD700] font-black uppercase text-xs tracking-widest mb-2">Склад</span>
+<h4 class="text-white text-xl font-black uppercase">Готовая продукция</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#181819] py-16 text-white">
+<div class="w-full max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="flex flex-col items-center md:items-start">
+<div class="text-lg font-black mb-4">ASPEN ARCHITECTURAL TIMBER</div>
+<p class="font-['Inter'] text-sm uppercase tracking-widest opacity-60">© 2024 ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-sm uppercase tracking-widest opacity-60 hover:opacity-100 hover:text-[#FFD700] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-sm uppercase tracking-widest opacity-60 hover:opacity-100 hover:text-[#FFD700] transition-colors" href="#">Technical Specs</a>
+<a class="font-['Inter'] text-sm uppercase tracking-widest opacity-60 hover:opacity-100 hover:text-[#FFD700] transition-colors" href="#">Delivery Terms</a>
+</div>
+<div class="text-right">
+<div class="text-2xl font-black text-[#FFD700]">+7 (999) 000-00-00</div>
+<div class="text-xs uppercase tracking-widest opacity-40 mt-1">Available 24/7 for quotes</div>
+</div>
+</div>
+</footer>
+</body></html>
