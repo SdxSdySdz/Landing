@@ -76,6 +76,29 @@
         }
         body { font-family: 'Inter', sans-serif; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        .pine-tree {
+            width: 120px;
+            height: 300px;
+            position: relative;
+        }
+        .pine-crown {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid #2d5a27;
+            position: absolute;
+        }
+        .pine-crown-2 { top: 60px; border-bottom: 120px solid #2d5a27; }
+        .pine-crown-3 { top: 120px; border-bottom: 140px solid #2d5a27; }
+        .pine-trunk {
+            width: 24px;
+            height: 60px;
+            background-color: #5d4037;
+            position: absolute;
+            bottom: 0;
+            left: 48px;
+        }
     </style>
 </head>
 <body class="bg-background text-on-background">
@@ -140,66 +163,15 @@
 <div class="text-white/20 font-black text-9xl tracking-tighter leading-none pointer-events-none uppercase">ASPHALL</div>
 </div>
 </section>
-<!-- Mini Catalog Section -->
-<section class="py-24 bg-surface-container-low border-b border-outline/10">
-<div class="container mx-auto px-8">
-<div class="mb-16">
-<h2 class="text-4xl font-black uppercase tracking-tighter leading-none text-primary">МИНИ КАТАЛОГ РАЗМЕРОВ СТРОГАННОЙ ДОСКИ</h2>
-<div class="w-24 h-2 bg-[#FFD700] mt-4"></div>
+<!-- Updated Catalog Section -->
+<section class="py-24 bg-[#fcfaf7] relative overflow-hidden">
+<div class="container mx-auto px-8 relative z-10">
+<div class="mb-12">
+<h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight text-primary font-sans">КАТАЛОГ РАЗМЕРОВ СТРОГАННОЙ ДОСКИ</h2>
+<div class="w-24 h-2 bg-[#FFD700] mt-6"></div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Row 1: 25mm -->
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-16 h-[25px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">25×100 мм</span>
-</div>
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-24 h-[25px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">25×150 мм</span>
-</div>
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-32 h-[25px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">25×200 мм</span>
-</div>
-<!-- Row 2: 30mm -->
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-16 h-[30px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">30×100 мм</span>
-</div>
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-24 h-[30px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">30×150 мм</span>
-</div>
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-32 h-[30px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">30×200 мм</span>
-</div>
-<!-- Row 3: 40mm -->
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-16 h-[40px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">40×100 мм</span>
-</div>
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-24 h-[40px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">40×150 мм</span>
-</div>
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-32 h-[40px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">40×200 мм</span>
-</div>
-<!-- Row 4: 50mm -->
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-16 h-[50px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">50×100 мм</span>
-</div>
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-24 h-[50px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">50×150 мм</span>
-</div>
-<div class="bg-white p-6 border border-outline/10 flex items-center gap-6 hover:border-[#FFD700] transition-colors">
-<div class="w-32 h-[50px] bg-primary/10 border-2 border-primary flex-shrink-0"></div>
-<span class="font-black text-xl text-primary">50×200 мм</span>
-</div>
+<div class="flex justify-center">
+<img alt="Каталог размеров строганной доски" class="w-full max-w-6xl h-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhsPpGGNcRgcn-N1PpUW_scKiZt_5SDyAk6xhMP7fy_nBahS2Q3P3z9g38QVOlvBVoKGPiLqZab1fiwjYhrXRIUH_8aeGgg53kLcGEjCITG_uzNUJKKA59k_0CSMGE99VaSlwWkjM8UGYKzz6ZI-H_YXf-uBSoB4a7MFhNlQ7bBBlMHpIE5XKdLfDguqOabSlapjl7K7hKBqsnhPHcajs8NpxahpFLIQdFCf4KVlUU0Bf0KZOhwJlt0WrbtINENPp9W8q-ocXi9ROE"/>
 </div>
 </div>
 </section>
