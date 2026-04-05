@@ -81,9 +81,9 @@
 </head>
 <body class="bg-background text-on-background">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-[#1e1800] z-50">
+<header class="fixed top-0 w-full flex flex-wrap justify-between items-center px-4 sm:px-8 py-3 sm:py-4 bg-[#1e1800] z-50">
 <div class="flex items-center gap-4">
-<img alt="Строй доски" class="h-10 md:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBRZcMuusy0v2VDvSCcZugKViszSvxXSUeXAEa4GylESEbm3i2_O3HuaIdTp5RWPVVbI4r_LLtt-7-i4GF1BvTgqmFQP2qxL7jGREnHiKDuoDuKRgeVFIVPkAFKtjEUxy1P6YjFghjJ1Ee04UpD8lYTMEAAKWSyWhhzrFAHWG5t5X5sa-kUxpKDsHI6f2Op7ra2ZLH4pcK7It9vx-HbpVhnDX7p5W4ZFQjIXcO_K4UowmqJZxkeBUMxwqLxRS61VIEA2Z18kbcAbn9"/>
+<img alt="Строй доски" class="h-10 md:h-12 w-auto object-contain" src="logo.webp"/>
 <div class="text-xl md:text-2xl font-black text-[#FFD700] tracking-tighter uppercase">СТРОЙ ДОСКИ</div>
 </div>
 <nav class="hidden md:flex gap-8">
@@ -98,7 +98,7 @@
 </div>
 </header>
 <!-- SideNavBar (Floating Circular Buttons) -->
-<aside class="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+<aside class="fixed right-4 bottom-6 z-50 flex flex-col gap-4">
 <a class="w-14 h-14 rounded-full bg-[#4CAF50] text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform" href="tel:+79610048008" title="Phone">
 <span class="material-symbols-outlined" data-icon="call">call</span>
 </a>
@@ -117,7 +117,7 @@
 </div>
 <div class="container mx-auto px-8 relative z-10">
 <div class="max-w-4xl">
-<h1 class="text-white text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6">ОБРЕЗНАЯ ДОСКА <br/>ИЗ ОСИНЫ ОТ ПРОИЗВОДИТЕЛЯ</h1>
+<h1 class="text-white text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-none mb-6">ОБРЕЗНАЯ ДОСКА <br/>ИЗ ОСИНЫ <br class="sm:hidden"/>ОТ ПРОИЗВОДИТЕЛЯ</h1>
 <p class="text-white/80 text-xl md:text-2xl font-body max-w-2xl mb-8">
                     Экологичный материал для бань и саун напрямую от производителя. Высочайшее качество обработки.
                 </p>
@@ -147,7 +147,7 @@
 </section>
 <!-- Updated Catalog Section (Mini-Catalog Image) -->
 <section class="bg-[#fcfaf7] overflow-hidden leading-[0]">
-<img alt="Каталог размеров строганной доски" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ugwhL8wGBBcbf2OZ1vcKOviHx_nhgHxMfB6uu6aQdphX1D-fnU9DYPGv_epUw5uYUypfh7s_QrnK_LD3gy1u6F5FULZFtyC8oKBQyX3sEj_61Fhg63feub2r-LVvs_BKnmPgcCDhT85RGorddTtEy5mBZxb2DN7cuG-yQi9GWTuEjOCre8hUe7XIS2Ub0r1kIomk55XXS22jCujVhTglHaEYk4VBxYUV2viS1E485Qmmhq5QEz5wG8v9_eQXU1phgsu_7Y7NaNp9g"/>
+<img alt="Каталог размеров строганной доски" class="w-full h-auto" src="catalog.jpg"/>
 </section>
 <!-- Product Catalog -->
 <section class="py-24 bg-surface" id="catalog">
@@ -161,99 +161,307 @@
                     ПРАЙС-ЛИСТ ОТ 2024 ГОДА. ВСЕ ПОЗИЦИИ В НАЛИЧИИ НА СКЛАДЕ.
                 </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-outline/10">
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-outline/10">
 <!-- Product Card 1 -->
-<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
-<div class="mb-8">
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
 <span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
-<div class="text-4xl font-black text-primary mt-2">50х100</div>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">50х100</div>
 <div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">33 штук/куб</div>
 </div>
-<div class="bg-[#FFD700] p-4 mb-6">
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
 <div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
-<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
 </div>
-<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
                         КУПИТЬ
                     </button>
 </div>
 <!-- Product Card 2 -->
-<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
-<div class="mb-8">
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
 <span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
-<div class="text-4xl font-black text-primary mt-2">100х100</div>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">100х100</div>
 <div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">16 штук/куб</div>
 </div>
-<div class="bg-[#FFD700] p-4 mb-6">
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
 <div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
-<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
 </div>
-<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
                         КУПИТЬ
                     </button>
 </div>
 <!-- Product Card 3 -->
-<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
-<div class="mb-8">
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
 <span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
-<div class="text-4xl font-black text-primary mt-2">25х100</div>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">25х100</div>
 <div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">66 штук/куб</div>
 </div>
-<div class="bg-[#FFD700] p-4 mb-6">
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
 <div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
-<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
 </div>
-<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
                         КУПИТЬ
                     </button>
 </div>
 <!-- Product Card 4 -->
-<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
-<div class="mb-8">
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
 <span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
-<div class="text-4xl font-black text-primary mt-2">25х150</div>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">25х150</div>
 <div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">44 штук/куб</div>
 </div>
-<div class="bg-[#FFD700] p-4 mb-6">
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
 <div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
-<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
 </div>
-<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
                         КУПИТЬ
                     </button>
 </div>
 <!-- Product Card 5 -->
-<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
-<div class="mb-8">
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
 <span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
-<div class="text-4xl font-black text-primary mt-2">50х200</div>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">50х200</div>
 <div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">16 штук/куб</div>
 </div>
-<div class="bg-[#FFD700] p-4 mb-6">
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
 <div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
-<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
 </div>
-<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
                         КУПИТЬ
                     </button>
 </div>
 <!-- Product Card 6 -->
-<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-8 group hover:bg-surface-container-high transition-all">
-<div class="mb-8">
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
 <span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
-<div class="text-4xl font-black text-primary mt-2">50x150</div>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">50x150</div>
 <div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">22 штук/куб</div>
 </div>
-<div class="bg-[#FFD700] p-4 mb-6">
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
 <div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
-<div class="text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-sm">за куб.м</span></div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
 </div>
-<button class="w-full bg-tertiary text-white py-4 font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 7 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">40х150</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">27 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 8 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">40х200</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">20 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 9 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">40х100</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">41 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 10 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">150х30</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">37 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 11 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">100х30</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">55 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 12 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">200х25</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">33 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 13 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">150х150</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">7 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 14 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">100х150</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">11 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 15 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">100х200</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">8 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Product Card 16 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Размер (мм)</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">200х200</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">4 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Брусок 5х5 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Брусок (см), 3 метра</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">5х5</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">133 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Брусок 4х4 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Брусок (см), 3 метра</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">4х4</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">204 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        КУПИТЬ
+                    </button>
+</div>
+<!-- Брусок 5х4 -->
+<div class="bg-surface-container-lowest border-r border-b border-outline/10 p-3 sm:p-8 group hover:bg-surface-container-high transition-all">
+<div class="mb-4 sm:mb-8">
+<span class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Брусок (см), 3 метра</span>
+<div class="text-2xl sm:text-4xl font-black text-primary mt-2">5х4</div>
+<div class="text-sm font-bold text-on-surface-variant mt-1 uppercase">204 штук/куб</div>
+</div>
+<div class="bg-[#FFD700] p-2 sm:p-4 mb-4 sm:mb-6">
+<div class="text-sm font-black uppercase tracking-tighter text-[#1e1800]">Цена за объем</div>
+<div class="text-xl sm:text-3xl font-black text-[#1e1800]">10 500 ₽ <span class="text-xs sm:text-sm">за куб.м</span></div>
+</div>
+<button class="w-full bg-tertiary text-white py-2 sm:py-4 text-sm sm:text-base font-black uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors">
 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
                         КУПИТЬ
                     </button>
